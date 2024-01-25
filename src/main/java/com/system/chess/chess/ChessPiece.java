@@ -3,7 +3,7 @@ package com.system.chess.chess;
 import com.system.chess.boardgame.Board;
 import com.system.chess.boardgame.Piece;
 
-public class ChessPiece extends Piece {
+public abstract  class ChessPiece extends Piece {
 
     private EColor color;
 
