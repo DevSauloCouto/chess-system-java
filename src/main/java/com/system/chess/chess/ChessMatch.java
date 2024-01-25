@@ -26,10 +26,14 @@ public class ChessMatch {
         return chessPieces;
     }
 
+    private void placeNewPiece(Character column, Integer row, ChessPiece piece) {
+        board.placePiece(piece, new ChessPosition(column, row).toPosition());
+    }
+
     private void initialSetup() {
-        board.placePiece(new Rook(board, EColor.WHITE), new Position(2, 1));
-        board.placePiece(new King(board, EColor.WHITE), new Position(0, 4));
-        board.placePiece(new King(board, EColor.BLACK), new Position(7, 4));
+        placeNewPiece('b', 6, new Rook(board, EColor.WHITE));
+        placeNewPiece('e', 8, new King(board, EColor.WHITE));
+        placeNewPiece('e', 1, new King(board, EColor.BLACK));
     }
 
 
